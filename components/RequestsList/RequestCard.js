@@ -8,6 +8,7 @@ import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import Icon from "@chakra-ui/icon";
 import { default as NextLink } from "next/link";
 import { FaTwitterSquare, FaLinkedin } from "react-icons/fa";
+import ContactModal from "../ContactModal";
 
 const markdownTheme = {
   p: (props) => {
@@ -93,7 +94,12 @@ const RequestCard = ({ request }) => {
               <MenuItem>I&apos;m busy</MenuItem>
             </MenuList>
           </Menu>
-          <Button colorScheme={"blueButton"}>Contact</Button>
+          <Button
+            colorScheme={"blueButton"}
+            onClick={ContactModal.isOpen}
+          >
+            Contact
+          </Button>
         </Stack>
       </Stack>
     </Stack>
